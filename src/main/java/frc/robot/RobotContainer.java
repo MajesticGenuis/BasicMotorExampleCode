@@ -23,6 +23,8 @@ public class RobotContainer {
   public Shooter shooterSub = new Shooter();
   //create a subsystem variable for the arm rotation motor
   public ArmRotation armSub = new ArmRotation();
+  //create a subsystem variable for the intake
+  public Intake intake = new Intake();
   
   //this is the default function for robot container, it will run one time when the robot turns on.
   public RobotContainer() {
