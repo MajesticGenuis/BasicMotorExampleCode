@@ -7,6 +7,7 @@ package frc.robot;
 import com.ctre.phoenix6.hardware.TalonFX;
 import com.ctre.phoenix6.signals.NeutralModeValue;
 
+import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 
 public class Intake extends SubsystemBase {
@@ -17,6 +18,12 @@ public class Intake extends SubsystemBase {
     setDefaultCommand(runOnce(()->{
       intakeMotor.set(0);
     }));
+  }
+
+  public Command intake(double speed){
+    return run(()->{
+      intakeMotor.set(speed);
+    });
   }
 
   @Override
