@@ -24,7 +24,7 @@ public class RobotContainer {
   //create a subsystem variable for the arm rotation motor
   public ArmRotation armSub = new ArmRotation();
   //create a subsystem variable for the intake
-  public Intake intake = new Intake();
+  public Intake intakeSub = new Intake();
   
   //this is the default function for robot container, it will run one time when the robot turns on.
   public RobotContainer() {
@@ -57,6 +57,9 @@ public class RobotContainer {
     //call the controller variable you created above
     //when the right bumper is pressed run the rotate command once with the 'neutral' position
     controller.rightBumper().onTrue(armSub.rotate(RotationPositions.neutral));
+    //call the controller variable
+    //while the left bumper is down, run the intake command with a speed of 1
+    controller.leftBumper().whileTrue(intakeSub.intake(1));
   }
 
   //Don't worry about this for now, later we will use this to program the robot's auto
