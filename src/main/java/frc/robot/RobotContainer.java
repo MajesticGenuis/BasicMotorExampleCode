@@ -33,7 +33,7 @@ public class RobotContainer {
   }
 
   //this function has 'void' instead of a variable type, so it does not need to return a value.
-  //whenever this function is called it simply executes the code within it and ends.
+  //whenever this function is called it only  executes the code within it and ends.
   private void configureBindings() {
     //call the controller variable you created above
     //while the x button is true(held down) run the shoot command with a speed of 1
